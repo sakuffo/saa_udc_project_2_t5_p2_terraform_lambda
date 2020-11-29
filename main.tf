@@ -12,8 +12,6 @@ provider "aws" {
   region = var.aws-primary
 }
 
-
-
 resource "aws_lambda_function" "greetings_from_lambda" {
   filename      = data.archive_file.lambda_function.output_path
   function_name = var.saa_lambda_function.name
@@ -29,3 +27,5 @@ resource "aws_lambda_function" "greetings_from_lambda" {
 
   tags = var.udc_default_tags
 }
+
+
