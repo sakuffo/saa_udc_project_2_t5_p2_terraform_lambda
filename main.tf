@@ -26,6 +26,8 @@ resource "aws_lambda_function" "greetings_from_lambda" {
   }
 
   tags = var.udc_default_tags
+
+  depends_on = [aws_cloudwatch_log_group.lambda_function_logs]
 }
 
 
