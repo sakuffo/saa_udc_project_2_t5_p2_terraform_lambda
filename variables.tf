@@ -1,6 +1,6 @@
 # TODO: Define the variable for aws_region
 variable "aws-primary" {
-  default = "us-east-1"
+  default = "us-west-2"
 }
 
 variable "saa_lambda_function" {
