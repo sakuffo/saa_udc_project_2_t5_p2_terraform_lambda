@@ -8,10 +8,12 @@ terraform {
   }
 }
 
+# AWS Provider
 provider "aws" {
   region = var.aws-primary
 }
 
+# Lambda function greetings
 resource "aws_lambda_function" "greetings_from_lambda" {
   filename      = data.archive_file.lambda_function.output_path
   function_name = var.saa_lambda_function.name
@@ -27,7 +29,7 @@ resource "aws_lambda_function" "greetings_from_lambda" {
 
   tags = var.udc_default_tags
 
-  depends_on = [aws_cloudwatch_log_group.lambda_function_logs]
+  depends_on = [aws_cloudwatch_log_group.lambda_function_logs] 
 }
 
 

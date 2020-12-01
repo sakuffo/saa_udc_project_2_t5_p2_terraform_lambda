@@ -1,8 +1,8 @@
-# TODO: Define the variable for aws_region
+# AWS Region to be used
 variable "aws-primary" {
   default = "us-west-2"
 }
-
+# Lambda function info
 variable "saa_lambda_function" {
   type = object({
     name = string
